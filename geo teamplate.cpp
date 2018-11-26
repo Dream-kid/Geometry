@@ -25,4 +25,8 @@ Area=1/2*abs((x0*y1-x1*y0)+(x1*y2-x2*y1)...+(xn*yn-1-xn-1*yn)+(xn*y0-x0*yn))
 area=(boundary_point)/2+inner_point-1
 // number of integer points between two points in 2d grid
  GCD(abs(x1 - x2), abs(y1 - y2))
-
+//area when u know three point of triangle
+double func(ll x1,ll y1,ll x2,ll y2,ll x3,ll y3)
+{
+    return abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))/2.0;
+}
