@@ -31,11 +31,12 @@ double func(ll x1,ll y1,ll x2,ll y2,ll x3,ll y3)
 {
     return abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2))/2.0;
 }
-
 // The main function that returns true if line segment 'p1q1'
 // and 'p2q2' intersect.
 struct Point
-{ double x,y; };
+{ 
+    double x,y;
+};
 bool onSegment(Point p, Point q, Point r)
 {
   if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) && q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y))return true;
