@@ -1,5 +1,5 @@
 double: input lf and output f
-#give 3 points and give u the center fo the circle
+#give 3 points and it give u the center fo the circle
 void func(double x1,double y1,double x2,double y2,double x3,double y3)
 {
     double midx1=(x1+x2)/2;
