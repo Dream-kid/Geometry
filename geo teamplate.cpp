@@ -61,3 +61,30 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
     if (o4 == 0 && onSegment(p2, q1, q2)) return true;
     return false;
 }
+//Rotating_calipers
+double cross(const point &a, const point &b, const point &c)
+{
+    return (b.first - a.first) * (c.second - a.second) -
+           (b.second - a.second) * (c.first - a.first) ;
+}
+double Rotating_calipers()
+{
+        v=convexHull(v);
+        double ans=0;
+        for(int i=0; i<v.size()-1; i++)
+        {
+            int x=i+1;
+            for(int j=i+1; j<v.size(); j++)
+            {
+                while(fabs(cross(v[i],v[j],v[x]))<fabs(cross(v[i],v[j],v[x+1])))
+                {
+                    x=x+1;
+                    x%=v.size();
+                }
+                ans=max(ans,fabs(cross(v[i],v[j],v[x])));
+            }
+        }
+        double temp=ans;
+        temp/=2;
+        printf("%.2f\n",temp);   
+}
