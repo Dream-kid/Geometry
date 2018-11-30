@@ -1,4 +1,5 @@
 double: input lf and output f
+#define pi acos(-1)
 #give 3 points and it give u the center fo the circle
 void func(double x1,double y1,double x2,double y2,double x3,double y3)
 {
@@ -88,10 +89,6 @@ double Rotating_calipers()
         temp/=2;
         printf("%.2f\n",temp);   
 }
-#include<bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-#define pi acos(-1)
 //area for intersection of two circle
 // long double a=r1;
 // long double b=r2;
