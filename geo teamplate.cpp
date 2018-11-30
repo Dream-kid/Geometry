@@ -104,7 +104,7 @@ void func(long double a,long double b,long double c)
         cout<<0<<endl;
         return;
     }
-    if(c<=abs(a-b)*abs(a-b))//one circle is fully inside another
+    if(c<=fabs(a-b)*fabs(a-b))//one circle is fully inside another
     {
         long double ans=min(b,a);
         ans*=ans;
