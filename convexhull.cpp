@@ -1,5 +1,5 @@
 //monotone chain convexhull
-typedef pair<long, long> point;
+typedef pair<ll, ll> point;
 bool cw(const point &a, const point &b, const point &c)
 {
     return (b.first - a.first) * (c.second - a.second) -
