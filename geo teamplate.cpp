@@ -88,3 +88,48 @@ double Rotating_calipers()
         temp/=2;
         printf("%.2f\n",temp);   
 }
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define pi acos(-1)
+//area for intersection of two circle
+// long double a=r1;
+// long double b=r2;
+//  long double c=(x1-x2)*(x1-x2)+(y1-y2)*(y1-y2);
+//ignore c sqrt
+void func(long double a,long double b,long double c)
+{
+    if(c>(a+b)*(a+b))//two circle outside
+    {
+        cout<<0<<endl;
+        return;
+    }
+    if(c<=abs(a-b)*abs(a-b))//one circle is fully inside another
+    {
+        long double ans=min(b,a);
+        ans*=ans;
+        ans*=pi;
+        cout<<fixed<<setprecision(10)<<ans<<endl;
+        return;
+    }
+    c=sqrt(c);
+    long double g,h;
+    long double temp1=-a*a+b*b+c*c;
+    temp1/=2.0;
+    temp1/=b;
+    temp1/=c;
+    g=acos(temp1);
+    long double temp2=-b*b+a*a+c*c;
+    temp2/=2.0;
+    temp2/=a;
+    temp2/=c;
+    h=acos(temp2);
+    g*=2.0;
+    h*=2.0;
+    //area of a segment by a chord in the circle
+    //here g and h is in radian
+    long double ans=a*a*(h-sin(h))+b*b*(g-sin(g));
+    ans/=2.0;
+    cout<<fixed<<setprecision(10)<<ans<<endl;
+    return;
+}
