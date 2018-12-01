@@ -1,4 +1,5 @@
 double: input lf and output f
+long double: input Lf and output f
 #define pi acos(-1)
 #give 3 points and it give u the center fo the circle
 void func(double x1,double y1,double x2,double y2,double x3,double y3)
