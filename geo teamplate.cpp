@@ -1,6 +1,9 @@
 double: input lf and output f
 long double:take input and output in double.In middle type cast into long double
 #define pi acos(-1)
+ellipse:
+area=pi*a*b
+2*a=r1+r2 (r1 and r2 is the distance from foci1 and foci2)
 #give 3 points and it give u the center fo the circle
 void func(double x1,double y1,double x2,double y2,double x3,double y3)
 {
