@@ -20,7 +20,7 @@ double func1(double a,double b,double c)
     x/=(2*a);
     return x;
 }
-//you have to call this function two times but 2nd time swap (x1,y1) and (x2,y2)
+//you have to call this function two times but 2nd time swap (x1,y1) and swap(x2,y2)
 void func(double x1,double y1,double x2,double y2,double radius,ll type)
 {
     if((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)>radius*radius*4)
