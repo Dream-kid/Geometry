@@ -6,9 +6,9 @@ ellipse:
 area=pi*a*b
 2*a=r1+r2 (r1 and r2 is the distance from foci1 and foci2)
 
-//give two points and radius in func and it return center of the circle     
+//give two points and radius in func and its return center of the circle     
 vector<pair<double,double> >v;
-double func(double a,double b,double c)
+double func2(double a,double b,double c)
 {
     double x=-b + sqrt(b*b - 4*a*c);
     x/=(2*a);
@@ -21,8 +21,7 @@ double func1(double a,double b,double c)
     return x;
 }
 //you have to call this function two times but 2nd time swap (x1,y1) and (x2,y2)
-//you also have to swap the centers for the 2nd time
-void func(double x1,double y1,double x2,double y2,double radius)
+void func(double x1,double y1,double x2,double y2,double radius,ll type)
 {
     if((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)>radius*radius*4)
         return;
@@ -36,12 +35,14 @@ void func(double x1,double y1,double x2,double y2,double radius)
     double a=1+tan1*tan1;
     double b= -2*x1 + 2*c*tan1 - tan1*2*y1;
     double d= x1*x1 + y1*y1 + c*c - 2*y1*c - radius*radius;
-    x=func(a,b,d);
+    x=func2(a,b,d);
     y=c + x*tan1;
-    v.push_back(make_pair(x,y));//swap (x,y) for the 2nd time
+    if(type==2)swap(x,y);
+    v.push_back(make_pair(x,y));
     x=func1(a,b,d);
     y=c + x*tan1;
-    v.push_back(make_pair(x,y));//swap (x,y) for the 2nd time
+    if(type==2)swap(x,y);
+    v.push_back(make_pair(x,y));
     return;
 }    
 
