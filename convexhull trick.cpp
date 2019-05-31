@@ -1,3 +1,4 @@
+//https://rezwanarefin01.github.io/posts/convex-hull-trick/
 y=mx + b;
 for a certain x we get max y
 
